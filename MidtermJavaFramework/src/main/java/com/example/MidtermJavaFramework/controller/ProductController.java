@@ -1,6 +1,5 @@
 package com.example.MidtermJavaFramework.controller;
 
-import com.example.MidtermJavaFramework.entity.Account;
 import com.example.MidtermJavaFramework.entity.Product;
 import com.example.MidtermJavaFramework.repository.ProductRepository;
 import com.example.MidtermJavaFramework.service.ProductService;
@@ -32,7 +31,6 @@ public class ProductController {
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
     /*
-    @GetMapping("")
     public List<Product> getAllAccounts() {
         return productRepository.findAll();
     }
@@ -58,7 +56,7 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public void updateAccount(@PathVariable Long id,
+    public void updateProduct(@PathVariable Long id,
                               @RequestBody Product product) {
 
         System.out.println("ProductController.updateProduct");

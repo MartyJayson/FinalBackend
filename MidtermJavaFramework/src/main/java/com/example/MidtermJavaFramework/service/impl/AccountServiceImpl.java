@@ -26,7 +26,7 @@ public class AccountServiceImpl implements AccountService, UserDetailsService {
     }
 
     @Override
-    public void createAccount(Account account) {
+    public void addAccount(Account account) {
         account.setPassword(passwordEncoder.encode(account.getPassword()));
         accountRepository.saveAndFlush(account);
     }

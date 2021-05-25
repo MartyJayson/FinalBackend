@@ -44,14 +44,14 @@ public class AccountController {
         account.setUsername(username);
         account.setPassword(password);
 
-        accountService.createAccount(account);
+        accountService.addAccount(account);
     }
-    @PostMapping
-    public void createAccount(@RequestBody Account account) {
-        System.out.println("AccountController.createAccount");
+    @PostMapping(value = "/addAccount")
+    public void addAccount(@RequestBody Account account) {
+        System.out.println("AccountController.addAccount");
         System.out.println("account = " + account);
 
-        accountService.createAccount(account);
+        accountService.addAccount(account);
     }
     @PutMapping("/{id}")
     public void updateAccount(@PathVariable Long id,
